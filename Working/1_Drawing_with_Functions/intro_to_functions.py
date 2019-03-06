@@ -32,6 +32,23 @@ def draw_tree(x,y):
 def draw_sun():
     arcade.draw_circle_filled(50,600,70, arcade.color.YELLOW)
 
+def on_draw(delta_time):
+    global sun
+
+    """ Draw everything """
+    arcade.start_render()
+
+    draw_sun(sun, 140)
+    draw_sun(450, 180)
+
+    # Add one to the x value, making the snow person move right
+    # Negative numbers move left. Larger numbers move faster.
+    sun += 1
+
+
+# Create a value that our snow_person1_x will start at.
+sun = 150
+
 def main():
     arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Drawing with Functions")
     arcade.set_background_color(arcade.color.SKY_BLUE
@@ -47,6 +64,13 @@ def main():
     draw_tree(100,300)
     draw_hill()
     draw_sun()
+
+        # Call on_draw every 60th of a second.
+   arcade.schedule(on_draw, 1 / 60)
+   arcade.run()
+
+    # Call the main function to get the program started.
+
 
     arcade.finish_render()
     arcade.run()
