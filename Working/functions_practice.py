@@ -1,12 +1,8 @@
-import math
-
-def volume(r,h):
-    return math.pi * (r**2 * h)
-
-radius = int(input("Enter the radius of the cylinder here: "))
-height = int(input("Enter the height of the cylinder here: "))
-
-def main():
-    print("The volume of the cylinder is", volume(radius,height))
-
-main()
+names = ["fred","john","teddy"]
+user = input("please enter your name here: ")
+if (user == names[0]):
+    print(user ,"is present")
+elif (user == names[1]):
+    print(user ,"is present")
+elif 
+    (user, "is not a student")
