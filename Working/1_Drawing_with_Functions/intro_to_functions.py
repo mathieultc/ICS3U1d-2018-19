@@ -46,35 +46,23 @@ def on_draw(delta_time):
     """ Draw everything """
     arcade.start_render()
 
-    draw_tree(10,20)
-    draw_tree(70,-10)
-    draw_tree(300,-10)
-    draw_apple(250,350)
-    draw_apple(220,300)
-    draw_apple(280,250)
-    draw_apple(280,300)
+    draw_tree(10, 20)
+    draw_tree(70, -10)
+    draw_tree(300, -10)
+    draw_apple(250, 350)
+    draw_apple(220, 300)
+    draw_apple(280, 250)
+    draw_apple(280, 300)
+    draw_cloud(200,100)
     draw_hill()
 
     draw_sun(draw_sun_x, 140)
-    draw_cloud(draw_cloud_x,140)
-
     # Add one to the x value, making the snow person move right
     # Negative numbers move left. Larger numbers move faster.
     draw_sun_x += 1
 
 draw_sun_x = 140
 
-#moving cloud
-def moving(delta_time):
-    global draw_cloud_x
-
-    arcade.start_render()
-
-    draw_cloud(draw_cloud_x,100)
-    draw_cloud_x += 1
-
-#Create a value that our snow_person1_x will start at.
-draw_cloud_x = 100
 
 def main():
     arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Drawing with Functions")
@@ -82,7 +70,6 @@ def main():
 
     # Call on_draw every 60th of a second.
     arcade.schedule(on_draw, 1/30)
-    arcade.schedule(moving, 1/60)
     arcade.finish_render()
     arcade.run()
 
