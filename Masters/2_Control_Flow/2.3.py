@@ -17,6 +17,7 @@ def caught_speeding(speed, is_birthday):
           return 1
       else:
           return 2
+
 def main():
     print(caught_speeding(speed,is_birthday))
 
