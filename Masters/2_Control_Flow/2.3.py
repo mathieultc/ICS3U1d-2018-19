@@ -1,5 +1,5 @@
 speed = int(input("Please enter your speed in km/h here: "))
-is_birthday = False
+is_birthday = True
 
 def caught_speeding(speed, is_birthday):
   if is_birthday:
