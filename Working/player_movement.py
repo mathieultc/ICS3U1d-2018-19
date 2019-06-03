@@ -18,13 +18,13 @@ right_pressed = False
 def on_update(delta_time):
     global up_pressed, player_y, player_x,down_pressed,right_pressed,left_pressed
     if up_pressed:
-        player_y += 100
+        player_y += 5
     if down_pressed:
-        player_y -= 100
+        player_y -= 5
     if right_pressed:
-        player_x += 100
+        player_x += 5
     if left_pressed:
-        player_x -= 1000
+        player_x -= 5
 
 
 def on_draw():

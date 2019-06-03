@@ -39,7 +39,7 @@ def update(delta_time):
         # read list values with square bracket notation
         if rain_y_positions[index] < 0:
             # modify list values using square bracket notation
-            rain_y_positions[index] = 480
+            rain_y_positions[index] = 550
 
 
 def on_draw():
