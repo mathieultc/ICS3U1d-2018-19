@@ -10,11 +10,11 @@ Button Click
 import arcade
 
 
-WIDTH = 640
-HEIGHT = 480
+WIDTH = 1000
+HEIGHT = 1000
 
 # There are better ways to represent buttons
-my_button = [100, 200, 150, 50]  # x, y, width, height
+my_button = [500,500, 150, 50]  # x, y, width, height
 
 
 def on_update(delta_time):
@@ -29,8 +29,6 @@ def on_draw():
                                       my_button[2],
                                       my_button[3],
                                       arcade.color.BLACK)
-
-
 def on_key_press(key, modifiers):
     pass
 
@@ -46,7 +44,7 @@ def on_mouse_press(x, y, button, modifiers):
     # Need to check all four limits of the button.
     if (x > my_button_x and x < my_button_x + my_button_w and
             y > my_button_y and y < my_button_y + my_button_h):
-        print("Clicked!!!")
+        arcade.draw_rectangle_filled(600,600,50,50,arcade.color.BLACK,1)
     else:
         print("not clicked")
 
