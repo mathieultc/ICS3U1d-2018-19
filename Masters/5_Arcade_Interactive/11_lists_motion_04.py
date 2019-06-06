@@ -55,7 +55,7 @@ def setup():
 def update(delta_time):
     for index in range(len(rain_x_positions)):
         rain_x_positions[index] -= 3
-        
+
 
         if rain_x_positions[index] < 0:
             rain_y_positions[index] = random.randrange(HEIGHT, HEIGHT+50)

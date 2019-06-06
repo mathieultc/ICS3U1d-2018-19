@@ -1,6 +1,5 @@
 """
 Button Click
-
 1. Figure out how you want to represent a button. Create global variable(s) for it.
 2. Draw the button using the information stored in the button's variable(s).
 3. In the on_mouse_press function, compare the mouse x and mouse y values to the
@@ -10,11 +9,11 @@ Button Click
 import arcade
 
 
-WIDTH = 640
-HEIGHT = 480
+WIDTH = 500
+HEIGHT = 500
 
 # There are better ways to represent buttons
-my_button = [100, 200, 150, 50]  # x, y, width, height
+my_button = [250,250, 150, 50]  # x, y, width, height
 
 
 def on_update(delta_time):
@@ -29,8 +28,6 @@ def on_draw():
                                       my_button[2],
                                       my_button[3],
                                       arcade.color.BLACK)
-
-
 def on_key_press(key, modifiers):
     pass
 
@@ -46,7 +43,7 @@ def on_mouse_press(x, y, button, modifiers):
     # Need to check all four limits of the button.
     if (x > my_button_x and x < my_button_x + my_button_w and
             y > my_button_y and y < my_button_y + my_button_h):
-        print("Clicked!!!")
+        print("clicked")
     else:
         print("not clicked")
 
@@ -68,4 +65,3 @@ def setup():
 
 if __name__ == '__main__':
     setup()
-
