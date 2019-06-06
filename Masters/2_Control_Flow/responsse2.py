@@ -1,9 +1,6 @@
-you = int(input("Please enter your stylishness of your clothes here: "))
-date = int(input("Please enter the stylishness of your date clothes here: "))
-
-if you > 8 or date > 8:
-    print(2)
-if you < 2 or date < 2 :
-    print(0)
-else :
-    print(1)
+n = 10
+for i in range(1, 10):
+	for j in range(i):
+		print(n, end=' ')
+		n += 1
+	print()
